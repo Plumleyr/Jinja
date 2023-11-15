@@ -6,9 +6,8 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="">
-        <h1>Madlibs</h1>
-        <input type="text">
+    <form action="{% block form_action %}{% endblock %}" method="{%block form_method%}{%endblock%}">
+        {%block content%}{%endblock%}
     </form>
 </body>
 </html>

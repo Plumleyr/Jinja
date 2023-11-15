@@ -1,0 +1,14 @@
+    {%extends 'base.html'%}
+    {%block form_action%}/story{%endblock%}
+    {%block form_method%}post{%endblock%}
+    {%block content%}
+    <h1>Madlibs</h1>
+    <ul>
+        {% for prompt in prompts%}
+        <label>{{prompt}}</label>
+        <li><input name='{{prompt}}'' type="text" placeholder="{{prompt}}"></li>
+        {% endfor %}
+    </ul>
+    <input type="hidden" name="{{selected_story}}">
+    <button>Create</button>
+    {%endblock%}
