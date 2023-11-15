@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 app.config['SECRET_KEY'] = "zzz"
 
-Stories = {'On_the_road' : Story(["adjective", "noun"],"I hate {adjective} {noun} drivers"), 'Slay_the_dragon' : Story(["noun", "action_verb","adjective"], '{noun} {action_verb} to slay a {adjective} dragon')}
+Stories = {'On_the_road' : Story(["adverb", "adjective"],"I hate {adverb} {adjective} drivers"), 'Slay_the_dragon' : Story(["noun", "action_verb","adjective"], '{noun} {action_verb} to slay a {adjective} dragon')}
 
 @app.route('/')
 def show_select_story():
